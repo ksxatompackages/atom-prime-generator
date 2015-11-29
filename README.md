@@ -5,15 +5,30 @@ This is a test of creating an Atom package, it provides no tools for helping peo
 
 ## Installation
 
-1. Open your terminal
+1. Prerequires:
+ - npm version 3.3.6 (Enter `npm --version` in your terminal to check it)
+ - Atom version 1.2.0
+
+2. Open your terminal
  - Windows: Press <kbd>Ctrl</kbd> + <kbd>R</kbd>, enter `cmd` (or `powershell`).
  - Mac OS X: Press <kbd>Cmd</kbd> + <kbd>Space</kbd>.
  - Linux: Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.
 
-2. Install this package to your Atom
- - In your terminal, enter this command:
+3. Install this package to your Atom
+ - In your terminal, enter the following commands:
 ```bash
-apm install https://github.com/ksxatompackages/atom-prime-generator.git
+# Step 1: Clone this repository to your computer, suppose that you choose 'path/to/your/directory' as installation directory of this package
+cd path/to/your/directory
+git clone https://github.com/ksxatompackages/atom-prime-generator.git
+# Step 2: Link this package to Atom
+cd ./atom-prime-generator # After doing Step 1, a directory named 'atom-prime-generator' which contains this package was created inside 'path/to/your/directory'
+apm develop prime-generator . # Create a package named 'prime-generator' to directory '.' which is 'atom-prime-generator' above
+apm link .
+# Step 3: Install package's dependencies
+cd path/to/your/directory
+mkdir ./node_modules # If 'node_modules' doesn't exist
+cd ./node_modules
+git clone https://github.com/ksxnodemodules/ksxnodemodules.git
 ```
  - You need to restart your Atom to use this package.
 
