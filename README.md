@@ -3,6 +3,35 @@ This is a test of creating an Atom package, it provides no tools for helping peo
 
 ![Screenshot](./resources/images/screenshot.png)
 
+## Installation
+
+1. Open your terminal
+ - Windows: Press <kbd>Ctrl</kbd> + <kbd>R</kbd>, enter `cmd` (or `powershell`).
+ - Mac OS X: Press <kbd>Cmd</kbd> + <kbd>Space</kbd>.
+ - Linux: Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.
+
+2. Install this package to your Atom
+ - In your terminal, enter this command:
+```bash
+apm install https://github.com/ksxatompackages/atom-prime-generator.git
+```
+ - You need to restart your Atom to use this package.
+
+## User Manual
+
+### Open/Close Prime Generator panel
+After you open/restart your Atom, there're 2 ways to toggle the panel:
+1. In menu-bar, go to Packages &#x2192; prime-generator &#x2192; Toggle.
+2. Open Command Palettle (by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>), then enter `Prime Generator: Toggle`.
+
+### User Interface
+ - Input box: Representing amount of primes would be printed.
+  - Hit <kbd>Enter</kbd> to print prime numbers.
+  - Hit <kbd>ESC</kbd> to clear reset (if the box was not empty) or close the panel (if the box was empty).
+ - Buttons
+  - Add: Print more an amount of primes which was represented by value in the input box.
+  - Reset: Clear the input box, reset output.
+
 # Prime Number Definition
 
 ## Common definition
@@ -26,12 +55,14 @@ This is a test of creating an Atom package, it provides no tools for helping peo
 ## Usage of `PrimeGenerator`
 
 ### Getting class
+
 #### Installation
 Open your terminal, type:
 ```bash
 cd path/to/node_modules
 npm install https://github.com/ksxnodemodules/ksxnodemodules.git
 ```
+
 #### Importation in JavaScript
 ```javascript
 var PrimeGenerator = require('ksxnodemodules').prime.PrimeGenerator;
