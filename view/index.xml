@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" id="htmlElement" class="prime-generator">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Prime Generator</title>
+	</head>
+	<body>
+		<div>
+			<input id="addingquantityinput" class="text-number" type="text" placeholder="Number of Primes" />
+			<button id="addingbutton" class="confirm">Add</button>
+			<button id="resetbutton" class="reset">Reset</button>
+		</div>
+		<div class="results-view text-copiable text-selectable">
+			<div>
+				<span id="errormessagespan" class="text-error" />
+			</div>
+			<div>
+				<span id="outputspan" class="text-success" />
+			</div>
+		</div>
+	</body>
+</html>

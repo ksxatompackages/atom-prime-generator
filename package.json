@@ -1,0 +1,19 @@
+{
+  "name": "PrimeGenerator",
+  "main": "./lib/prime-generator",
+  "version": "0.0.0",
+  "description": "Generate Primes",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "prime-generator:toggle"
+  },
+  "repository": "https://github.com/atom/prime-generator",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+	  "https://github.com/ksxnodemodules/ksxnodemodules.git": ">=0.0.1"
+  }
+}
