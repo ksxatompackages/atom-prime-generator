@@ -7,8 +7,6 @@ module.exports = new (function () {
 	var variables = require('../lib/variables.json');
 	var main = require('./main.js');
 
-	var texttittle = variables.text.title;
-	var numbertabwidth = variables.number.tabWidth;
 	var openuri = variables.uri.open;
 
 	var self = this;
@@ -19,7 +17,7 @@ module.exports = new (function () {
 		var htmlContent = readFileSync(__dirname + '/index.xml');
 		var htmlDocument = domparser.parseFromString(htmlContent, 'text/xml');
 		var htmlElement = htmlDocument.documentElement;
-		pane.response = new main(new ElementSet(htmlElement), pane);
+		setTimeout(main.bind(null, new ElementSet(htmlElement)));
 		return htmlElement;
 	})
 
@@ -37,13 +35,14 @@ module.exports = new (function () {
 		.setMethod
 			(self, "open", open)
 			(self, "PaneView", PaneView)
+			(self, "dispose", dispose)
 		.setConst
 			(self, "viewProviderDisposable", viewProviderDisposable)
 			(self, "openerDisposable", openerDisposable)
 	;
 
 	function open() {
-		atom.workspace.open(openuri).then((view) => view.response.reset());
+		return atom.workspace.open(openuri);
 	}
 
 	var pane;
@@ -60,10 +59,7 @@ module.exports = new (function () {
 
 	}
 
-	((proto) => {
-		proto.title = texttittle;
-		proto.tabWidth = numbertabwidth;
-	})(PaneView.prototype);
+	Object.assign(PaneView.prototype, variables.number, variables.text);
 
 	function makePropertyGetter(object, pname) {
 		object["get" + pname[0].toUpperCase() + pname.slice(1)] = () => object[pname];
@@ -81,6 +77,11 @@ module.exports = new (function () {
 	}
 
 	var iterateArray = Function.call.bind(Array.prototype.forEach);
+
+	function dispose() {
+		viewProviderDisposable.dispose();
+		openerDisposable.dispose();
+	}
 
 })();
 

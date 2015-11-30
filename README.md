@@ -42,7 +42,7 @@ After you open/restart your Atom, there're 2 ways to open the pane:
 ### User Interface
  - Input box: Representing amount of primes would be printed.
   - Hit <kbd>Enter</kbd> to print prime numbers.
-  - Hit <kbd>ESC</kbd> to clear reset (if the box was not empty) or close the pane (if the box was empty).
+  - Hit <kbd>ESC</kbd> to clear every input and output.
  - Buttons
   - Add: Print more an amount of primes which was represented by value in the input box.
   - Reset: Clear the input box, reset output.

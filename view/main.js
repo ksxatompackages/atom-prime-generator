@@ -1,5 +1,5 @@
 
-module.exports = function (elements_collection, pane) {
+module.exports = function (elements_collection) {
 	'use strict';
 
 	var PrimeGenerator = require('ksxnodemodules').prime.PrimeGenerator;
@@ -11,22 +11,11 @@ module.exports = function (elements_collection, pane) {
 	addingquantityinput.addEventListener('keydown', (event) => event.keyCode === 13 && main(), false);
 	elements_collection.addingbutton.addEventListener('click', main, false);
 	elements_collection.resetbutton.addEventListener('click', reset, false);
-	elements_collection.htmlElement.addEventListener('keydown', (event) => {
-		if (event.keyCode !== 27) {
-			return;
-		}
-		if (event.target === addingquantityinput && addingquantityinput.value !== '') {
-			reset();
-			return;
-		}
-		require('../lib/prime-generator.js').panelBox.hide();
-	}, false)
+	elements_collection.htmlElement.addEventListener('keydown', (event) => event.keyCode === 27 && reset(), false)
 
 	var primegen;
 
 	reset();
-
-	this.reset = reset;
 
 	function main() {
 
