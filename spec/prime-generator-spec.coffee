@@ -12,7 +12,7 @@ describe "PrimeGenerator", ->
     workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('prime-generator')
 
-  describe "when the prime-generator:toggle event is triggered", ->
+  describe "when the prime-generator:open event is triggered", ->
     it "hides and shows the modal panel", ->
       # Before the activation event the view is not on the DOM, and no panel
       # has been created
@@ -20,7 +20,7 @@ describe "PrimeGenerator", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'prime-generator:toggle'
+      atom.commands.dispatch workspaceElement, 'prime-generator:open'
 
       waitsForPromise ->
         activationPromise
@@ -33,7 +33,7 @@ describe "PrimeGenerator", ->
 
         primeGeneratorPanel = atom.workspace.panelForItem(primeGeneratorElement)
         expect(primeGeneratorPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'prime-generator:toggle'
+        atom.commands.dispatch workspaceElement, 'prime-generator:open'
         expect(primeGeneratorPanel.isVisible()).toBe false
 
     it "hides and shows the view", ->
@@ -49,7 +49,7 @@ describe "PrimeGenerator", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'prime-generator:toggle'
+      atom.commands.dispatch workspaceElement, 'prime-generator:open'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "PrimeGenerator", ->
         # Now we can test for view visibility
         primeGeneratorElement = workspaceElement.querySelector('.prime-generator')
         expect(primeGeneratorElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'prime-generator:toggle'
+        atom.commands.dispatch workspaceElement, 'prime-generator:open'
         expect(primeGeneratorElement).not.toBeVisible()

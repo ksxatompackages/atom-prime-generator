@@ -1,0 +1,12 @@
+
+{
+	"text": {
+		"title": "Prime Generator"
+	},
+	"number": {
+		"tabWidth": 4
+	},
+	"uri": {
+		"open": "prime-generator://open"
+	}
+}

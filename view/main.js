@@ -26,6 +26,8 @@ module.exports = function (elements_collection) {
 
 	reset();
 
+	this.reset = reset;
+
 	function main() {
 
 		var n = parseInt(addingquantityinput.value);

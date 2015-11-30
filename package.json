@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "prime-generator:toggle"
+    "atom-workspace": "prime-generator:open"
   },
   "repository": "https://github.com/atom/prime-generator",
   "license": "MIT",

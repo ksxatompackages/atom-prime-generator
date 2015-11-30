@@ -34,15 +34,15 @@ git clone https://github.com/ksxnodemodules/ksxnodemodules.git
 
 ## User Manual
 
-### Open/Close Prime Generator panel
-After you open/restart your Atom, there're 2 ways to toggle the panel:
-1. In menu-bar, go to Packages &#x2192; prime-generator &#x2192; Toggle.
-2. Open Command Palettle (by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>), then enter `Prime Generator: Toggle`.
+### Open/Close Prime Generator tab
+After you open/restart your Atom, there're 2 ways to open the tab:
+1. In menu-bar, go to Packages &#x2192; prime-generator &#x2192; Open.
+2. Open Command Palettle (by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>), then enter `Prime Generator: Open`.
 
 ### User Interface
  - Input box: Representing amount of primes would be printed.
   - Hit <kbd>Enter</kbd> to print prime numbers.
-  - Hit <kbd>ESC</kbd> to clear reset (if the box was not empty) or close the panel (if the box was empty).
+  - Hit <kbd>ESC</kbd> to clear reset (if the box was not empty) or close the tab (if the box was empty).
  - Buttons
   - Add: Print more an amount of primes which was represented by value in the input box.
   - Reset: Clear the input box, reset output.

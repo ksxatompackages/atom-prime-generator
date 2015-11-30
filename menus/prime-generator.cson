@@ -1,11 +1,11 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
-'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle prime-generator'
-      'command': 'prime-generator:toggle'
-    }
-  ]
+# 'context-menu':
+#  'atom-text-editor': [
+#     {
+#       'label': 'Toggle prime-generator'
+#       'command': 'prime-generator:open'
+#     }
+#  ]
 'menu': [
   {
     'label': 'Packages'
@@ -13,8 +13,8 @@
       'label': 'prime-generator'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'prime-generator:toggle'
+          'label': 'Open'
+          'command': 'prime-generator:open'
         }
       ]
     ]
