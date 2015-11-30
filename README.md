@@ -15,21 +15,24 @@ This is a test of creating an Atom package, it provides no tools for helping peo
  - Linux: Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.
 
 3. Install this package to your Atom
- - In your terminal, enter the following commands:
-```bash
-# Step 1: Clone this repository to your computer, suppose that you choose 'path/to/your/directory' as installation directory of this package
+ - Step 1: Clone this repository to your computer, suppose that you choose 'path/to/your/directory' as installation directory of this package
+ ```bash
 cd path/to/your/directory
 git clone https://github.com/ksxatompackages/atom-prime-generator.git
-# Step 2: Link this package to Atom
+ ```
+ - Step 2: Link this package to Atom
+ ```bash
 cd ./atom-prime-generator # After doing Step 1, a directory named 'atom-prime-generator' which contains this package was created inside 'path/to/your/directory'
 apm develop prime-generator . # Create a package named 'prime-generator' to directory '.' which is 'atom-prime-generator' above
 apm link .
-# Step 3: Install package's dependencies
+ ```
+ - Step 3: Install package's dependencies
+ ```
 cd path/to/your/directory
 mkdir ./node_modules # If 'node_modules' doesn't exist
 cd ./node_modules
 git clone https://github.com/ksxnodemodules/ksxnodemodules.git
-```
+ ```
  - You need to restart your Atom to use this package.
 
 ## User Manual
