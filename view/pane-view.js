@@ -19,7 +19,7 @@ module.exports = new (function () {
 		var htmlContent = readFileSync(__dirname + '/index.xml');
 		var htmlDocument = domparser.parseFromString(htmlContent, 'text/xml');
 		var htmlElement = htmlDocument.documentElement;
-		pane.response = new main(new ElementSet(htmlElement));
+		pane.response = new main(new ElementSet(htmlElement), pane);
 		return htmlElement;
 	})
 

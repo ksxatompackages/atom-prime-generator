@@ -1,5 +1,5 @@
 
-module.exports = function (elements_collection) {
+module.exports = function (elements_collection, pane) {
 	'use strict';
 
 	var PrimeGenerator = require('ksxnodemodules').prime.PrimeGenerator;
