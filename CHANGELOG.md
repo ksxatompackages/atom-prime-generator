@@ -3,4 +3,5 @@
 * Every bug fixed
 
 ## 2.0.0
-* Change displaying method from panel to pane
+* Changed displaying method from panel to pane
+* Added button 'Add' which is used to open generated primes in an editor pane to edit and save
