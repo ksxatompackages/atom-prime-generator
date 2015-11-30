@@ -11,9 +11,10 @@ module.exports = function (elements_collection) {
 	addingquantityinput.addEventListener('keydown', (event) => event.keyCode === 13 && main(), false);
 	elements_collection.addingbutton.addEventListener('click', main, false);
 	elements_collection.resetbutton.addEventListener('click', reset, false);
-	elements_collection.htmlElement.addEventListener('keydown', (event) => event.keyCode === 27 && reset(), false)
+	elements_collection.getbutton.addEventListener('click', createEditorPane, false);
+	elements_collection.htmlElement.addEventListener('keydown', (event) => event.keyCode === 27 && reset(), false);
 
-	var primegen;
+	var primegen, length;
 
 	reset();
 
@@ -42,6 +43,7 @@ module.exports = function (elements_collection) {
 
 	function print(content) {
 		outputspan.textContent += content;
+		++length;
 	}
 
 	function msgErr(error) {
@@ -50,9 +52,14 @@ module.exports = function (elements_collection) {
 
 	function reset() {
 		primegen = new PrimeGenerator();
+		length = 0;
 		outputspan.textContent = '2';
 		addingquantityinput.value = '';
 		msgErr('');
+	}
+
+	function createEditorPane() {
+		atom.workspace.open("first-" + String(length) + "-primes.txt").then((editor) => editor.setText(outputspan.textContent));
 	}
 
 }

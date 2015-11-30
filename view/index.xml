@@ -10,6 +10,7 @@
 			<input id="addingquantityinput" class="text-number" type="text" placeholder="Number of Primes" />
 			<button id="addingbutton" class="confirm">Add</button>
 			<button id="resetbutton" class="reset">Reset</button>
+			<button id="getbutton">Get</button>
 		</div>
 		<div class="results-view text-copiable text-selectable">
 			<div>
