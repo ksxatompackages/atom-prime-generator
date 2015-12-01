@@ -5,6 +5,7 @@ module.exports = new (function () {
 	var readFileSync = require('fs').readFileSync;
 	var utilities = require('ksxnodemodules').utilities;
 	var variables = require('../lib/variables.json');
+	var createEditor = require('./create-editor.js');
 	var main = require('./main.js');
 
 	var openuri = variables.uri.open;
@@ -17,7 +18,11 @@ module.exports = new (function () {
 		var htmlContent = readFileSync(__dirname + '/index.xml');
 		var htmlDocument = domparser.parseFromString(htmlContent, 'text/xml');
 		var htmlElement = htmlDocument.documentElement;
-		setTimeout(main.bind(null, new ElementSet(htmlElement)));
+		setTimeout(() => {
+			var elements_collection = new ElementSet(htmlElement);
+			createEditor(elements_collection);
+			main(elements_collection);
+		})
 		return htmlElement;
 	})
 
@@ -84,34 +89,3 @@ module.exports = new (function () {
 	}
 
 })();
-
-// module.exports = function () {
-// 	'use strict';
-// 	return atom.workspace.open(__dirname + '/index.xml');
-// 	// return atom.workspace.open(__dirname + '/index.xml')
-// }
-
-// function main(out) {
-// 	'use strict';
-//
-// 	out.open
-//
-// 	// var readFileSync = require('fs').readFileSync;
-// 	// var htmlContent = readFileSync(__dirname + '/index.xml', 'utf8');
-// 	// var domparser = new DOMParser();
-// 	// var element = domparser.parseFromString(htmlContent, 'text/xml').documentElement;
-//
-// 	// var iterateArray = Function.call.bind(Array.prototype.forEach);
-//
-// 	// exportElementById(element);
-// 	// function exportElementById(element) {
-// 	// 	var id = element.id;
-// 	// 	if (id) {
-// 	// 		elements_collection[id] = element;
-// 	// 	}
-// 	// 	iterateArray(element.children, exportElementById);
-// 	// }
-//
-// }
-//
-// main(exports);

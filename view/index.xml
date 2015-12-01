@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<div>
-			<input id="addingquantityinput" class="text-number" type="text" placeholder="Number of Primes" />
+			<div id="addingcontainerdiv" class="text-number" />
 			<button id="addingbutton" class="confirm">Add</button>
 			<button id="resetbutton" class="reset">Reset</button>
 			<button id="getbutton">Get</button>

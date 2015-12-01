@@ -4,11 +4,12 @@ module.exports = function (elements_collection) {
 
 	var PrimeGenerator = require('ksxnodemodules').prime.PrimeGenerator;
 
-	var addingquantityinput = elements_collection.addingquantityinput;
+	var inputEditor = elements_collection.inputEditor;
+	var addingcontainerdiv = elements_collection.addingcontainerdiv;
 	var errormessagespan = elements_collection.errormessagespan;
 	var outputspan = elements_collection.outputspan;
 
-	addingquantityinput.addEventListener('keydown', (event) => event.keyCode === 13 && main(), false);
+	addingcontainerdiv.addEventListener('keydown', (event) => event.keyCode === 13 && main(), false);
 	elements_collection.addingbutton.addEventListener('click', main, false);
 	elements_collection.resetbutton.addEventListener('click', reset, false);
 	elements_collection.getbutton.addEventListener('click', createEditorPane, false);
@@ -32,7 +33,7 @@ module.exports = function (elements_collection) {
 
 	function main() {
 
-		var n = parseInt(addingquantityinput.value);
+		var n = parseInt(inputEditor.getText() || 0);
 
 		if (!isFinite(n) || n < 0) {
 			msgErr("Invalid input.");
@@ -66,7 +67,7 @@ module.exports = function (elements_collection) {
 		primegen = new PrimeGenerator();
 		length = 1;
 		outputspan.textContent = '2';
-		addingquantityinput.value = '';
+		inputEditor.setText('');
 		msgErr('');
 	}
 
