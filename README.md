@@ -49,6 +49,7 @@ After you open/restart your Atom, there're 2 ways to open the pane:
  - Buttons
   - Add: Print more an amount of primes which was represented by value in the input box.
   - Reset: Clear the input box, reset output.
+  - Get: Create an editor pane which contains all generated primes.
 
 # Prime Number Definition
 
