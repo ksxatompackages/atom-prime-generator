@@ -3,12 +3,13 @@
   "main": "./lib/prime-generator",
   "version": "2.0.0",
   "description": "Generate Primes",
+  "readme": "Prime Generator\n\nI create this just for fun, please read REAME.md in the repository for more details",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "prime-generator:open"
   },
-  "repository": "https://github.com/atom/prime-generator",
+  "repository": "https://github.com/ksxatompackages/atom-prime-generator",
   "license": "MIT",
   "engines": {
     "atom": ">=1.2.0 <2.0.0"
