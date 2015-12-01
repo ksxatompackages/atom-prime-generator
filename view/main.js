@@ -64,7 +64,7 @@ module.exports = function (elements_collection) {
 
 	function reset() {
 		primegen = new PrimeGenerator();
-		length = 0;
+		length = 1;
 		outputspan.textContent = '2';
 		addingquantityinput.value = '';
 		msgErr('');
