@@ -12,7 +12,19 @@ module.exports = function (elements_collection) {
 	elements_collection.addingbutton.addEventListener('click', main, false);
 	elements_collection.resetbutton.addEventListener('click', reset, false);
 	elements_collection.getbutton.addEventListener('click', createEditorPane, false);
-	elements_collection.htmlElement.addEventListener('keydown', (event) => event.keyCode === 27 && reset(), false);
+	elements_collection.htmlElement.addEventListener('keydown', (event) => {
+		switch (event.keyCode) {
+			case 27:
+				reset();
+				break;
+			case 83:
+			case 115:
+				if (event.ctrlKey && !event.shiftKey && !event.altKey) {
+					createEditorPane();
+				}
+				break;
+		}
+	}, false);
 
 	var primegen, length;
 
