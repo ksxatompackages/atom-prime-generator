@@ -1,7 +1,11 @@
 # prime-generator package
 This is a test of creating an Atom package, it provides no tools for helping people write code more convenient, I wrote this package just for fun.
 
-![Screenshot](./resources/images/screenshot.png)
+Main Interface
+![screenshot-main](./resources/images/screenshot-main.png)
+
+Editor Pane
+![screenshot-editor-pane](./resources/images/screenshot-editor-pane.png)
 
 ## Installation
 
