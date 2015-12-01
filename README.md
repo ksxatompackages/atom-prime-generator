@@ -32,7 +32,7 @@ apm develop prime-generator . # Create a package named 'prime-generator' to dire
 apm link .
  ```
  - Step 3: Install package's dependencies
- ```
+ ```bash
 cd path/to/your/directory
 mkdir ./node_modules # If 'node_modules' doesn't exist
 cd ./node_modules
