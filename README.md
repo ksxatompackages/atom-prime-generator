@@ -10,8 +10,9 @@ Editor Pane
 ## Installation
 
 1. Prerequires:
- - npm version 3.3.6 (Enter `npm --version` in your terminal to check it)
- - Atom version 1.2.0
+ - npm version >= 3.3.6 (Enter `npm --version` in your terminal to check it)
+ - git version >= 2.0.0 (Enter `git --version` in your terminal to check it)
+ - Atom version >= 1.2.0
  - Your Atom must support ECMAScript 6 syntax to be able to use this package
 
 2. Open your terminal

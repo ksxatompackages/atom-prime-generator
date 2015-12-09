@@ -24,7 +24,7 @@ module.exports = new (function () {
 			main(elements_collection);
 		})
 		return htmlElement;
-	})
+	});
 
 	var openerDisposable = atom.workspace.addOpener((uri) => {
 
