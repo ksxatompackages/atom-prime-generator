@@ -9,7 +9,7 @@ Editor Pane
 
 ## Installation
 
-1. Prerequires:
+1. Requirement before start:
  - npm version >= 3.3.6 (Enter `npm --version` in your terminal to check it)
  - git version >= 2.0.0 (Enter `git --version` in your terminal to check it)
  - Atom version >= 1.2.0
