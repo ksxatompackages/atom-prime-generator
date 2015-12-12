@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" id="htmlElement" class="prime-generator">
+<html xmlns="http://www.w3.org/1999/xhtml" id="htmlElement" class="prime-generator pane-item">
 	<head>
 		<meta charset="UTF-8" />
 		<title>Prime Generator</title>
 	</head>
-	<body>
+	<body class="pane-item">
 		<div>
 			<div id="addingcontainerdiv" class="text-number" />
 			<button id="addingbutton" class="confirm">Add</button>
